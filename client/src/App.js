@@ -10,7 +10,7 @@ function App() {
   const {loading} = useSelector((state) => state.alerts)
   return (
     <div className="App">
-      {loading && <Spinner/>}
+      {!loading && <Spinner/>}
       <BrowserRouter>
          <Routes>
              <Route path='/' element ={<ProtectedRoute><Home/></ProtectedRoute>} />
